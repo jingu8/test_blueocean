@@ -6,5 +6,10 @@ pipeline {
         echo 'This is for demo purpose'
       }
     }
+    stage('Test') {
+      steps {
+        sh 'echo $ENV'
+      }
+    }
   }
 }
