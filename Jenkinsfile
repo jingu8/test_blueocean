@@ -11,9 +11,9 @@ pipeline {
         sh 'echo $ENV'
       }
     }
-    stage('') {
+    stage('Timestamp') {
       steps {
-        git(url: 'https://github.com/jingu8/test_blueocean', branch: 'main')
+        timestamps()
       }
     }
   }
