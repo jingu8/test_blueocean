@@ -1,19 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Get Github Code') {
       steps {
-        echo 'This is for demo purpose'
-      }
-    }
-    stage('Test') {
-      steps {
-        sh 'echo $ENV'
-      }
-    }
-    stage('Timestamp') {
-      steps {
-        timestamps()
+        git(url: 'https://github.com/jingu8/gradledemo', branch: 'main')
       }
     }
   }
